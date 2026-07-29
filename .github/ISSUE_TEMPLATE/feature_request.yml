@@ -1,0 +1,46 @@
+name: Feature / coverage request
+description: Ask AIF to cover a new agent, command shape, or language — or to change existing behavior.
+title: "[request] "
+labels: ["enhancement", "beta"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this for coverage gaps and feature ideas. If instead AIF did
+        something *wrong* (a wrong block/allow, a crash), please use the **Bug
+        report** template and attach `aif doctor --bundle` output.
+
+        Note on scope: the beta targets the **negligent agent**. Detecting a
+        deliberately **adversarial**, obfuscated, or encoded evasion is
+        explicitly out of beta scope (see <https://aif.harden.run/trust>), so a
+        request framed as "AIF should catch this evasion" is a known,
+        documented gap rather than a defect.
+  - type: textarea
+    id: request
+    attributes:
+      label: What should AIF cover or do?
+      description: Describe the agent, command shape, language, or behavior. Use placeholders instead of real secrets or commands.
+      placeholder: |
+        e.g. "cover the `rsync` file-read to a remote sink" or
+        "an adapter for <agent>" or "warn instead of block on <shape>".
+    validations:
+      required: true
+  - type: textarea
+    id: why
+    attributes:
+      label: Why it matters
+      description: What are you trying to do, and what breaks or is unsafe without it?
+    validations:
+      required: true
+  - type: dropdown
+    id: kind
+    attributes:
+      label: Kind of request
+      options:
+        - New agent / IDE adapter
+        - New command or execution-channel coverage
+        - New language coverage
+        - Change to an existing block/allow/warn decision
+        - Something else
+    validations:
+      required: true

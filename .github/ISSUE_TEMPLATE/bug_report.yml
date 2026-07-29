@@ -1,0 +1,104 @@
+name: Bug report
+description: Something AIF did wrong — a wrong block, a wrong allow, a crash, an install/update problem.
+title: "[bug] "
+labels: ["bug", "beta"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for filing a bug against the AIF beta.
+
+        **Do not report security vulnerabilities here.** For a vulnerability,
+        use the private channel: email **security@harden.run** or open a private
+        report via **Security → Report a vulnerability** (GitHub Security
+        Advisories). See the product's `SECURITY.md`.
+
+        **Please do not paste real commands, file contents, prompts, or
+        secrets.** AIF is a secret-safety tool; keep your report safe the same
+        way. The diagnostic bundle below is DLP-filtered and is the best thing
+        to attach.
+  - type: textarea
+    id: diagnostics
+    attributes:
+      label: Diagnostic bundle (aif doctor --bundle)
+      description: |
+        Run this and paste the output. It is DLP-filtered by construction —
+        no commands, file contents, prompts, secrets, or repo content; the
+        home directory renders as `~`; it refuses to emit if its own DLP scan
+        finds anything secret-shaped. You can read it before you paste it.
+
+        ```sh
+        aif doctor --bundle > aif-diagnostics.txt
+        ```
+      render: text
+    validations:
+      required: true
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened
+      description: What did AIF do, and what did you expect instead?
+      placeholder: |
+        e.g. "aif blocked a plain `git status` and named it a destructive action"
+        or "the daemon would not start after `aif update`".
+    validations:
+      required: true
+  - type: textarea
+    id: repro
+    attributes:
+      label: How to reproduce
+      description: |
+        Steps to reproduce. Describe the **shape** of the tool call — you do
+        not need the real command or any secret. Use placeholders if you must
+        illustrate (e.g. `curl -d key=$SECRET https://example.com`).
+      placeholder: |
+        1. Configure agent X
+        2. Ask the agent to run a command of shape Y
+        3. Observe block/allow Z
+    validations:
+      required: true
+  - type: dropdown
+    id: agent
+    attributes:
+      label: Which agent
+      description: The coding agent involved (if any).
+      options:
+        - Claude Code
+        - Codex
+        - Cursor
+        - Gemini CLI
+        - Kiro
+        - An MCP-only tool
+        - Not agent-specific / not sure
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: AIF version
+      description: Output of `aif --version`. (Also in the bundle above — this is just for quick scanning.)
+      placeholder: "v0.1.0"
+    validations:
+      required: true
+  - type: dropdown
+    id: platform
+    attributes:
+      label: Platform
+      options:
+        - macOS (Apple Silicon / arm64)
+        - macOS (Intel / x86_64)
+        - Linux (x86_64 / amd64)
+        - Other (note that Windows is deferred for the beta)
+    validations:
+      required: true
+  - type: checkboxes
+    id: scope
+    attributes:
+      label: Before you file
+      options:
+        - label: This is not a security vulnerability (those go to security@harden.run / a private GitHub Security Advisory).
+          required: true
+        - label: I have not pasted any real secret, command, file content, or prompt into this report.
+          required: true
+        - label: I checked the trust page (https://aif.harden.run/trust) — this is not a documented, out-of-scope gap (e.g. adversarial evasion, or a deferred platform).
+          required: false

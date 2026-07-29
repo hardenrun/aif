@@ -1,0 +1,17 @@
+# Steer people to the templates (and away from filing vulnerabilities in the
+# open). Blank issues are disabled so every report carries the diagnostic
+# bundle and the safety checkboxes.
+blank_issues_enabled: false
+contact_links:
+  - name: Report a security vulnerability (private)
+    url: https://github.com/hardenrun/aif/security/advisories/new
+    about: Do NOT open a public issue for a vulnerability. Report it privately here, or email security@harden.run.
+  - name: Trust & transparency page
+    url: https://aif.harden.run/trust
+    about: What AIF sends home (complete network-call inventory), what is always blocked, measured coverage, fail-closed behavior, and known gaps — verifiable with a proxy.
+  - name: Support expectations (beta)
+    url: https://github.com/hardenrun/aif/blob/main/SUPPORT.md
+    about: Best-effort, no SLA during the beta. How to get help fastest.
+  - name: Install & docs
+    url: https://aif.harden.run/trust
+    about: Install one-liner, the 60-second demo, and the local-first README.
