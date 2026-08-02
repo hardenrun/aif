@@ -13,7 +13,13 @@ Then:
 ```sh
 aif configure
 aif demo
+aif show
+aif show --tui
 ```
+
+<img width="3840" height="2160" alt="aif-session" src="https://github.com/user-attachments/assets/f0169edc-f1af-4f98-8f71-67f2bf73583f" />
+
+
 
 ## Supported agents
 
