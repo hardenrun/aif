@@ -32,7 +32,7 @@ aif show --tui
 | Kiro | hooks for the main agent; subagent MCP calls via proxy |
 | OpenClaw, Hermes | block-and-steer via a bridge process |
 
-See more at our [trust page](https://aif.harden.run/trust).
+See more at our [trust page](https://aif.harden.run/trust.md).
 
 
 ## Telemetry
@@ -43,7 +43,7 @@ We never collect code, commands, file paths, prompts, or anything a secret could
   secret-safety tool inspecting its own egress.
 - Opt out with one environment variable: `AIF_NO_TELEMETRY=1`.
 
-For full schema see [trust](https://aif.harden.run/trust).
+For full schema see [trust](https://aif.harden.run/trust.md).
 
 ## Contributing
 
