@@ -1,0 +1,149 @@
+AIF BETA LICENSE AGREEMENT
+==========================
+
+Version 1.0 — Beta
+
+This Beta License Agreement ("Agreement") governs your use of the `aif`
+software binary and its accompanying files in this archive (collectively, the
+"Software"), made available by VizopsAI, Inc. ("we", "us", "our"). By downloading,
+installing, or using the Software, you ("you") agree to this Agreement. If you
+do not agree, do not install or use the Software.
+
+The Software incorporates third-party open-source components that are licensed
+to you under their own terms; those components and their licenses are listed
+in the accompanying NOTICE file and the `third_party/` directory. Nothing in
+this Agreement limits, supersedes, or modifies the rights granted to you under
+those open-source licenses. Where this Agreement conflicts with an open-source
+license as applied to that component, the open-source license controls for
+that component.
+
+1. LICENSE GRANT
+   Subject to your compliance with this Agreement, we grant you a limited,
+   worldwide, non-exclusive, non-transferable, non-sublicensable, revocable
+   license to install and use the Software in object-code (binary) form on
+   machines you own or control, for your internal evaluation and use during
+   the beta period. The Software is a local, pre-execution security tool for
+   AI coding agents; you may run it against your own repositories and
+   development environments.
+
+2. BETA STATUS
+   The Software is pre-release "beta" software. It may contain defects, may
+   change or be withdrawn at any time, and is not guaranteed to be complete,
+   supported, or fit for production use. We may modify, suspend, recall (see
+   the version-recall mechanism documented in RECALL.md), or discontinue the
+   Software or this beta program at any time.
+
+3. RESTRICTIONS
+   Except as expressly permitted by this Agreement or by an applicable
+   open-source license covering a bundled component, you will not: (a)
+   reverse engineer, decompile, or disassemble the proprietary portions of the
+   Software, except to the extent this restriction is prohibited by applicable
+   law; (b) rent, lease, sell, sublicense, or provide the Software as a hosted
+   or managed service to third parties; (c) remove or alter any proprietary
+   notices, the NOTICE file, or third-party license texts; or (d) use the
+   Software to build a competing product. These restrictions do not apply to
+   the separately licensed open-source components identified in NOTICE.
+
+4. OWNERSHIP
+   The Software is licensed, not sold. We and our licensors retain all right,
+   title, and interest in and to the proprietary portions of the Software,
+   including all intellectual property rights. All rights not expressly
+   granted are reserved.
+
+5. PRIVACY AND NETWORK BEHAVIOR
+   AIF is local-first. Its network behavior — the update-check/version ping
+   and any telemetry — is disclosed on first run and documented on the trust
+   page and in the README. See SECURITY.md and the README for the full
+   network-call inventory and opt-out controls.
+
+6. FEEDBACK
+   If you provide feedback, bug reports, or suggestions, you grant us a
+   perpetual, irrevocable, royalty-free license to use them without
+   restriction or obligation to you.
+
+7. NO WARRANTY
+   THE SOFTWARE IS PROVIDED "AS IS" AND "AS AVAILABLE", WITHOUT WARRANTY OF
+   ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES
+   OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, TITLE, AND
+   NON-INFRINGEMENT. YOU ASSUME ALL RISK ARISING FROM YOUR USE OF THE
+   SOFTWARE. AIF IS A DEFENSE-IN-DEPTH CONTROL AND DOES NOT GUARANTEE THAT
+   ALL UNSAFE AGENT ACTIONS WILL BE PREVENTED.
+
+8. LIMITATION OF LIABILITY
+   TO THE MAXIMUM EXTENT PERMITTED BY LAW, IN NO EVENT WILL WE OR OUR
+   LICENSORS BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL,
+   OR EXEMPLARY DAMAGES, OR FOR ANY LOSS OF PROFITS, DATA, OR GOODWILL,
+   ARISING OUT OF OR RELATED TO THIS AGREEMENT OR THE SOFTWARE, EVEN IF
+   ADVISED OF THE POSSIBILITY OF SUCH DAMAGES. OUR TOTAL AGGREGATE LIABILITY
+   WILL NOT EXCEED ONE HUNDRED U.S. DOLLARS (USD $100).
+
+9. TERMINATION
+   This Agreement is effective until terminated. It terminates automatically
+   if you breach it. Upon termination, you must stop using and remove the
+   Software (`aif configure --uninstall` and remove `~/.aif`). Sections 3–9
+   survive termination.
+
+10. GENERAL
+   This Agreement is the entire agreement between you and us regarding the
+   Software and supersedes prior understandings. If any provision is held
+   unenforceable, the remaining provisions remain in effect. Our failure to
+   enforce a provision is not a waiver.
+
+11. GOVERNING LAW
+   This Agreement is governed by the laws of the State of Delaware, USA,
+   without regard to its conflict-of-laws principles, and the United Nations
+   Convention on Contracts for the International Sale of Goods does not apply.
+   The Federal Arbitration Act governs the interpretation and enforcement of
+   section 12.
+
+12. BINDING ARBITRATION; CLASS-ACTION WAIVER
+
+   PLEASE READ THIS SECTION CAREFULLY. IT REQUIRES DISPUTES TO BE RESOLVED BY
+   BINDING INDIVIDUAL ARBITRATION AND WAIVES YOUR RIGHT TO A JURY TRIAL AND TO
+   PARTICIPATE IN A CLASS ACTION.
+
+   (a) Agreement to arbitrate. Except for the claims described in (d), you and
+   we agree that any dispute, claim, or controversy arising out of or relating
+   to this Agreement or the Software (a "Dispute") will be resolved by final
+   and binding arbitration on an individual basis, and not in court.
+
+   (b) Administrator and rules. The arbitration will be administered by JAMS
+   under its rules then in effect (its Streamlined Arbitration Rules for a
+   Dispute seeking less than US$250,000, and its Comprehensive Arbitration
+   Rules otherwise). If JAMS is unavailable or declines to administer, the
+   American Arbitration Association (AAA) will administer under its applicable
+   rules. The arbitrator decides all issues, including the arbitrability of a
+   claim, except that a court — not the arbitrator — decides whether the
+   class-action waiver in (c) is enforceable.
+
+   (c) Class-action waiver. You and we agree to arbitrate solely on an
+   individual basis. Class, collective, consolidated, and representative
+   proceedings are not permitted, and the arbitrator may not consolidate more
+   than one person's claims or preside over any class or representative
+   proceeding. If this waiver is found unenforceable as to a particular
+   Dispute, that Dispute (and only that Dispute) will be severed and heard in
+   the courts described in (d); the rest of this section remains in effect.
+
+   (d) Exceptions. Either party may (i) bring an individual claim in a
+   small-claims court of competent jurisdiction, and (ii) seek injunctive or
+   other equitable relief in the state or federal courts located in Delaware
+   to protect its intellectual property or confidential information; each
+   party consents to personal jurisdiction and venue in those courts for that
+   limited purpose.
+
+   (e) Conduct and location. The arbitration may be conducted by
+   videoconference; any in-person hearing will be held in the county of your
+   residence or another location the parties agree to. A small Dispute may be
+   decided on the documents alone at the arbitrator's discretion.
+
+   (f) 30-day opt-out. You may opt out of this section 12 by emailing
+   legal@harden.run within 30 days after you first accept this Agreement,
+   stating your name and that you opt out of arbitration. Opting out does not
+   affect any other part of this Agreement.
+
+13. NOTICES
+   Legal notices to us must be in writing and sent to: VizopsAI, Inc.,
+   480 California Avenue, Suite 201, Palo Alto, CA 94306, USA, Attn: Legal
+   (legal@harden.run).
+
+Contact: legal@harden.run · Security: security@harden.run (see SECURITY.md)

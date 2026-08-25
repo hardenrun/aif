@@ -1,0 +1,192 @@
+AIF — third-party software notices and attributions
+====================================================
+
+The `aif` binary is proprietary software distributed under the AIF Beta
+License (see LICENSE.txt in this archive). It incorporates, adapts, or is
+derived from the third-party open-source components listed below. This NOTICE
+file is provided to satisfy the attribution and notice-retention conditions of
+those licenses (in particular Apache License 2.0 §4(c) and §4(d), and the MIT
+notice-retention clause). The full text of each referenced license is bundled
+under `third_party/`.
+
+Nothing in this NOTICE modifies the terms of any license; it is informational.
+The AIF Beta License governs the `aif` binary as a whole and does not restrict
+your rights in the separately licensed components below.
+
+--------------------------------------------------------------------------------
+1. pipelock — adapted (Apache License 2.0)
+--------------------------------------------------------------------------------
+  Component:   pipelock (agent pre-execution enforcement engine)
+  License:     Apache License, Version 2.0  (third_party/Apache-2.0.txt)
+  Copyright:   Copyright 2026 Josh Waldrep and the pipelock contributors
+
+  Portions of the AIF daemon's enforcement, MCP-proxy, DLP/secret-scanning,
+  and agent-configuration logic are derived from or modeled on pipelock and
+  redistributed in modified, compiled form as part of the `aif` binary. In
+  accordance with Apache-2.0 §4(b), the AIF source files that adapt pipelock
+  carry prominent in-file notices identifying them as changed and naming the
+  originating pipelock file (see, e.g., `internal/configure/configure.go`,
+  `internal/mcpproxy/`, `internal/scan/`, `internal/hook/adapter.go` in the
+  AIF source tree). AIF's changes are its own and are not endorsed by the
+  pipelock authors.
+
+--------------------------------------------------------------------------------
+2. agentsview — copied presentational helpers (MIT License)
+--------------------------------------------------------------------------------
+  Component:   agentsview (agent decision viewer)
+  License:     MIT License  (third_party/MIT.txt)
+  Copyright:   Copyright (c) the agentsview authors
+
+  The `aif show` local web viewer (embedded in the `aif` binary via the
+  compiled UI bundle) copies specific presentational helper modules from
+  agentsview — duration/label/token/clipboard/syntax-highlight formatting.
+  Each copied source file retains its MIT attribution header in the AIF source
+  tree (`runtime/ui/src/lib/content/*.ts`). The MIT copyright and permission
+  notice is retained here and in `third_party/MIT.txt` as the license requires.
+
+--------------------------------------------------------------------------------
+3. Embedded brand web fonts (SIL Open Font License 1.1)
+--------------------------------------------------------------------------------
+  The `aif show` local web viewer embeds the following font software as woff2
+  latin subsets inside the compiled UI bundle (no fonts are fetched over the
+  network at run time). All three typefaces are licensed under the SIL Open
+  Font License, Version 1.1 (third_party/OFL-1.1.txt); the fonts are not sold
+  by themselves and are bundled with this software as OFL §2 permits.
+
+  Component:   Inter
+  License:     SIL Open Font License 1.1  (third_party/OFL-1.1.txt)
+  Copyright:   Copyright 2016 The Inter Project Authors
+               (https://github.com/rsms/inter)
+
+  Component:   Inter Tight
+  License:     SIL Open Font License 1.1  (third_party/OFL-1.1.txt)
+  Copyright:   Copyright 2022 The Inter Project Authors
+               (https://github.com/rsms/inter-tight)
+
+  Component:   JetBrains Mono
+  License:     SIL Open Font License 1.1  (third_party/OFL-1.1.txt)
+  Copyright:   Copyright 2020 The JetBrains Mono Project Authors
+               (https://github.com/JetBrains/JetBrainsMono)
+
+  The vendored subset files and their exact provenance (Fontsource packaging
+  of the upstream releases) are documented in the AIF source tree at
+  `runtime/ui/src/assets/fonts/README.md`.
+
+--------------------------------------------------------------------------------
+4. Amazon Q Developer CLI (Kiro lineage) — interop (MIT OR Apache-2.0)
+--------------------------------------------------------------------------------
+  Component:   aws/amazon-q-developer-cli (Kiro CLI upstream lineage)
+  License:     Dual-licensed MIT OR Apache License 2.0
+               (third_party/MIT.txt, third_party/Apache-2.0.txt)
+  Copyright:   Copyright Amazon.com, Inc. or its affiliates
+
+  AIF's Kiro adapter (`internal/hook/kiro.go`) implements the Kiro/Amazon Q
+  hook wire contract for interoperability. The hook payload/exit-code contract
+  shape is followed from the open-source CLI; the adapter implementation is
+  AIF's own.
+
+--------------------------------------------------------------------------------
+5. Bundled Go module dependencies (statically linked into `aif`)
+--------------------------------------------------------------------------------
+  The `aif` binary statically links the following Go modules. Their licenses
+  are permissive (MIT / BSD-3-Clause / Apache-2.0); copies of the Apache-2.0
+  and MIT texts are bundled under `third_party/`, and BSD-3-Clause is
+  reproduced in `third_party/BSD-3-Clause.txt`.
+
+    github.com/charmbracelet/bubbletea            MIT
+    github.com/charmbracelet/lipgloss             MIT
+    github.com/charmbracelet/colorprofile         MIT
+    github.com/charmbracelet/x/*                  MIT
+    github.com/muesli/termenv                     MIT
+    github.com/muesli/ansi                        MIT
+    github.com/muesli/cancelreader                MIT
+    github.com/aymanbagabas/go-osc52/v2           MIT
+    github.com/lucasb-eyer/go-colorful            MIT
+    github.com/mattn/go-isatty                    MIT
+    github.com/mattn/go-localereader              MIT
+    github.com/mattn/go-runewidth                 MIT
+    github.com/rivo/uniseg                        MIT
+    github.com/xo/terminfo                        MIT
+    github.com/erikgeiser/coninput                MIT
+    github.com/inconshreveable/mousetrap          Apache-2.0
+    github.com/smacker/go-tree-sitter             MIT
+    github.com/santhosh-tekuri/jsonschema/v6      Apache-2.0
+    github.com/spf13/cobra                        Apache-2.0
+    github.com/spf13/pflag                        BSD-3-Clause
+    github.com/google/uuid                        BSD-3-Clause
+    github.com/dustin/go-humanize                 MIT
+    github.com/ncruces/go-strftime                BSD-3-Clause
+    github.com/remyoudompheng/bigfft              BSD-3-Clause
+    gopkg.in/yaml.v3                              MIT AND Apache-2.0
+    golang.org/x/sys                              BSD-3-Clause
+    golang.org/x/text                             BSD-3-Clause
+    modernc.org/sqlite                            BSD-3-Clause
+    modernc.org/libc                              BSD-3-Clause
+    modernc.org/mathutil                          BSD-3-Clause
+
+  This list mirrors runtime/daemon/go.mod (direct + first-order indirect
+  requirements). The authoritative per-release manifest is generated from the
+  build's module graph by `go-licenses` (see PLATFORM_SUPPORT.md / SIGNING.md
+  release runbook); this table is the human-readable summary and is verified
+  against go.mod by infra/ci/check_notice.sh.
+
+--------------------------------------------------------------------------------
+6. Additional acknowledgments (design/heuristics influence, no code copied)
+--------------------------------------------------------------------------------
+  - llm-guard (Protect AI) — MIT — informed the secret-detection heuristics in
+    AIF's DLP scanner and inline shim; AIF's detector is an independent
+    reimplementation, not a copy of llm-guard source.
+  - ollama — MIT — the CLI/daemon lifecycle UX (`aif serve`/`aif status`)
+    follows ollama's interaction patterns; no ollama source is included.
+
+--------------------------------------------------------------------------------
+7. Local inference tier — engine binary and base model checkpoint
+--------------------------------------------------------------------------------
+  The optional local model tier that `aif configure` sets up (with your
+  consent) runs two third-party artifacts. Neither is compiled into the `aif`
+  binary: the inference engine is distributed as its own archive, and the
+  model checkpoint is downloaded at configure time and verified by sha256
+  digest. On the product surface both present under de-branded names
+  (`aif-server`, `aif-model-base-v1`); this section is the binding upstream
+  attribution for both, and the upstream names appear here — the legal home —
+  by design.
+
+  Component:   llama.cpp (`llama-server`), distributed as `aif-server`
+  License:     MIT License  (third_party/MIT.txt)
+  Copyright:   Copyright (c) 2023-2026 The ggml authors
+
+  The `aif-server` inference engine binary is the `llama-server` program from
+  the llama.cpp project (https://github.com/ggml-org/llama.cpp), built
+  unmodified from the source commit pinned in the AIF source tree
+  (runtime/daemon/scripts/zaya_toolchain.lock) and renamed only at the
+  packaging step. The MIT copyright and permission notice is retained here,
+  in third_party/MIT.txt, and as LICENSE.llama.cpp.txt inside the engine
+  archive itself; each engine build's exact source commit is recorded in the
+  build_info.txt shipped next to the binary.
+
+  Component:   ZAYA1-8B (base checkpoint), served as `aif-model-base-v1`
+  License:     Apache License, Version 2.0  (third_party/Apache-2.0.txt)
+  Copyright:   Copyright Zyphra and the ZAYA1 model authors
+
+  The model artifact the configure flow downloads and serves as
+  `aif-model-base-v1` is `ZAYA1-8B-Q4_K_M.gguf`
+  (sha256 330ad2b15a6dabc9d955e7f10f4f7ee220180f06ee3bee4d06062218966f2c74),
+  a GGUF quantization of Zyphra's ZAYA1-8B model
+  (https://huggingface.co/Zyphra/ZAYA1-8B, Apache-2.0), obtained from the
+  Apache-2.0-licensed GGUF packaging at
+  https://huggingface.co/Abiray/ZAYA1-8B-GGUF at the revision pinned in the
+  vendored launcher. It is the PUBLIC BASE checkpoint — NOT the finetuned
+  firewall model. The digest above is the identity the runtime's integrity
+  gate verifies; `aif doctor` reports the running model by its de-branded
+  label and this digest.
+
+--------------------------------------------------------------------------------
+Separately distributed AIF components
+--------------------------------------------------------------------------------
+  The AIF client SDKs (`@hardenrun/aif` for Node, `harden-aif` for Python) are
+  distributed separately under the Apache License 2.0 (permissive) — see
+  sdk/node/LICENSE and sdk/python/LICENSE. They are not part of this binary
+  archive and are not governed by the AIF Beta License.
+
+If you believe an attribution here is incomplete or incorrect, please contact
+security@harden.run (see SECURITY.md) and we will correct it.
