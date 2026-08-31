@@ -1,6 +1,6 @@
-# Harden.Run AI Firewall
+# Harden.Run AIF (Agentic Integrity Foundation)
 
-The Harden AI Firewall is a local-first AI firewall for coding and productivity agents. If AIF is useful to you please star this repo.
+The Harden AIF is a local system for coding agent safety. If AIF is useful to you please star this repo.
 
 ## Getting Started
 
@@ -17,7 +17,7 @@ aif show
 aif show --tui
 ```
 
-<img width="1680" height="944" alt="harden-ai-firewall-secret-blocked-hq" src="https://github.com/user-attachments/assets/a5d17710-4a76-4ef7-b887-c8dfb2036138" />
+<img width="1680" height="944" alt="harden-agentic-integrity-foundation-secret-blocked-hq" src="https://github.com/user-attachments/assets/a5d17710-4a76-4ef7-b887-c8dfb2036138" />
 
 
 
