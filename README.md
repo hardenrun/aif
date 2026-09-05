@@ -17,8 +17,8 @@ aif show
 aif show --tui
 ```
 
-<img width="1680" height="944" alt="harden-agentic-integrity-foundation-secret-blocked-hq" src="https://github.com/user-attachments/assets/a5d17710-4a76-4ef7-b887-c8dfb2036138" />
-
+<!-- <img width="1680" height="944" alt="harden-agentic-integrity-foundation-secret-blocked-hq" src="https://github.com/user-attachments/assets/a5d17710-4a76-4ef7-b887-c8dfb2036138" /> -->
+<img width="1920" height="1080" alt="harden-aif-synchronous-ltr-16x9-light" src="https://github.com/user-attachments/assets/b682b003-5a96-4e9e-9c1b-2f4da18fb707" />
 
 
 ## Supported agents
